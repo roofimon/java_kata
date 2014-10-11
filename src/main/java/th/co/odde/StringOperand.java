@@ -1,6 +1,6 @@
 package th.co.odde;
 
-public class StringOperand implements Operand {
+public class StringOperand extends Operand{
     private int input;
     public StringOperand(int input){
         this.input = input;
