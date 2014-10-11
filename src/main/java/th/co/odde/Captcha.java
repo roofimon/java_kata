@@ -5,7 +5,7 @@ public class Captcha {
 
     }
 
-    public Operand getLeftOperand() {
-        return new Operand(1);
+    public IntegerOperand getLeftOperand() {
+        return new IntegerOperand(1);
     }
 }
