@@ -25,4 +25,16 @@ public class CaptchaTest {
         Captcha captcha = new Captcha(2,2,1,1);
         assertEquals("Two", captcha.getLeftOperand().toString());
     }
+
+    @Test
+    public void rightOperandShouldBeTwoWhenInPutIs2212(){
+        Captcha captcha = new Captcha(2,2,1,2);
+        assertEquals("Two", captcha.getRightOperand().toString());
+    }
+
+    @Test
+    public void rightOperandShouldBeEightWhenInPutIs2218(){
+        Captcha captcha = new Captcha(2,2,1,8);
+        assertEquals("Eight", captcha.getRightOperand().toString());
+    }
 }
