@@ -1,7 +1,8 @@
 package th.co.odde;
 
-public class IntegerOperand extends Operand{
+public class IntegerOperand extends Operand {
     private int input;
+
     public IntegerOperand(int input) {
         this.input = input;
     }
