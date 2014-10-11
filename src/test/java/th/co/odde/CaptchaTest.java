@@ -13,4 +13,16 @@ public class CaptchaTest {
         Captcha captcha = new Captcha(1,1,1,1);
         assertEquals("1", captcha.getLeftOperand().toString());
     }
+
+    @Test
+    public void leftOperandShouldBeOneWhenInPutIs2111(){
+        Captcha captcha = new Captcha(2,1,1,1);
+        assertEquals("One", captcha.getLeftOperand().toString());
+    }
+
+    @Test
+    public void leftOperandShouldBeTwoWhenInPutIs2211(){
+        Captcha captcha = new Captcha(2,2,1,1);
+        assertEquals("Two", captcha.getLeftOperand().toString());
+    }
 }
