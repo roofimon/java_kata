@@ -1,14 +1,15 @@
 package th.co.odde;
 
 public class StringOperand extends Operand {
-    private int input;
+    private String value;
     private String[] numberString = new String[]{"Zero", "One", "Two", "Three", "Four", "Five", "Six", "Seven", "Eight", "Nine" };
+
     public StringOperand(int input) {
-        this.input = input;
+        this.value = numberString[input];
     }
 
     @Override
     public String toString() {
-        return numberString[input];
+        return value;
     }
 }

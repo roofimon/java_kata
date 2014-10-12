@@ -4,9 +4,6 @@ import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;
 
-/**
- * Created by roof on 10/11/14 AD.
- */
 public class CaptchaTest {
     @Test
     public void leftOperandShouldBe1WhenInPutIs1111(){
@@ -36,5 +33,17 @@ public class CaptchaTest {
     public void rightOperandShouldBeEightWhenInPutIs2218(){
         Captcha captcha = new Captcha(2,2,1,8);
         assertEquals("Eight", captcha.getRightOperand().toString());
+    }
+
+    @Test
+    public void operatorShouldBePlusWhenInPutIs2218(){
+        Captcha captcha = new Captcha(2,2,1,8);
+        assertEquals("+", captcha.getOperator().toString());
+    }
+
+    @Test
+    public void operatorShouldBeMinusWhenInPutIs2218(){
+        Captcha captcha = new Captcha(2,2,2,8);
+        assertEquals("-", captcha.getOperator().toString());
     }
 }
