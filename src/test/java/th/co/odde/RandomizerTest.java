@@ -12,7 +12,7 @@ public class RandomizerTest {
     public void testGetOperandNumber(){
         Integer operandValue;
         operandValue = randomizer.getOperandValue();
-        assertThat(operandValue, allOf(greaterThan(1), lessThanOrEqualTo(9)));
+        assertThat(operandValue, allOf(greaterThanOrEqualTo(1), lessThanOrEqualTo(9)));
     }
 
     @Test
