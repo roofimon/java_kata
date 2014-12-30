@@ -10,7 +10,7 @@ import java.util.concurrent.atomic.AtomicLong;
  * Created by roof on 12/30/14.
  */
 @RestController
-public class GreetingController {
+public class CaptchaController {
     private static final String template = "Hello, %s!";
     private final AtomicLong counter = new AtomicLong();
 
