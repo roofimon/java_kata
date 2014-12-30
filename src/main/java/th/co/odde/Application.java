@@ -2,6 +2,8 @@ package th.co.odde;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 
 /**
@@ -10,7 +12,19 @@ import org.springframework.context.annotation.ComponentScan;
 @ComponentScan
 @EnableAutoConfiguration
 public class Application {
+    @Bean
+    Randomizer randomizer() {
+        return new MyRandomizer();
+    }
+
+    @Bean
+    CaptchaService captchaService() {
+        CaptchaService captchaService = new MyCaptchaService();
+        captchaService.setRandomizer(randomizer());
+        return captchaService;
+    }
+
     public static void main(String[] args) {
-        SpringApplication.run(Application.class, args);
+        ApplicationContext ctx = SpringApplication.run(Application.class, args);
     }
 }
