@@ -10,8 +10,12 @@ public class Captcha {
 
     public String getLeft() {
         String[] intToString = {"ONE", "TWO", "THREE", "FOUR", "FIVE", "SIX", "SEVEN", "EIGHT", "NINE"};
-        if (this.pattern == 2)
+        if (this.pattern == 2) {
+            if (left == 2) {
+                return "2";
+            }
             return "1";
+        }
         return intToString[this.left-1];
     }
 }

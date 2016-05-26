@@ -30,4 +30,10 @@ public class CaptchaTest {
         Captcha captcha = new Captcha(2, 1, DUMMY_OPERATOR, DUMMY_RIGHT);
         assertEquals("1", captcha.getLeft());
     }
+
+    @Test
+    public void leftOperandShoudBe2WhenPatternIs2AndLeftIs2() {
+        Captcha captcha = new Captcha(2, 2, DUMMY_OPERATOR, DUMMY_RIGHT);
+        assertEquals("2", captcha.getLeft());
+    }
 }
