@@ -55,4 +55,10 @@ public class CaptchaTest {
         assertEquals("-",captcha.getOperator());
     }
 
+    @Test
+    public void operatorShouldBeMultiplyWhenOperatorIs2() {
+        Captcha captcha = new Captcha(1, 1, 2, DUMMY_RIGHT);
+        assertEquals("*", captcha.getOperator());
+    }
+
 }

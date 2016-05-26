@@ -21,6 +21,8 @@ public class Captcha {
     public String getOperator() {
         if(this.operator ==  3)
             return "-";
+        if (this.operator == 2)
+            return "*";
         return "+";
     }
 }
