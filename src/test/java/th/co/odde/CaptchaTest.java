@@ -36,4 +36,11 @@ public class CaptchaTest {
         Captcha captcha = new Captcha(2, 2, DUMMY_OPERATOR, DUMMY_RIGHT);
         assertEquals("2", captcha.getLeft());
     }
+
+    @Test
+    public void leftOperandShouldBe9WhenPatternIs2AndLeftIs() {
+        Captcha captcha = new Captcha(2, 9, DUMMY_OPERATOR, DUMMY_RIGHT);
+        assertEquals("9", captcha.getLeft());
+    }
+
 }

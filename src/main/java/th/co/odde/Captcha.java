@@ -13,6 +13,8 @@ public class Captcha {
         if (this.pattern == 2) {
             if (left == 2) {
                 return "2";
+            } else if(left == 9) {
+                return "9";
             }
             return "1";
         }
