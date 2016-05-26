@@ -43,4 +43,10 @@ public class CaptchaTest {
         assertEquals("9", captcha.getLeft());
     }
 
+    @Test
+    public void operatorShouldBeAddWhenOperatorIs1() {
+        Captcha captcha  = new Captcha(1, 1, 1, DUMMY_RIGHT);
+        assertEquals("+", captcha.getOperator());
+    }
+
 }

@@ -15,4 +15,8 @@ public class Captcha {
         }
         return intToString[this.left-1];
     }
+
+    public String getOperator() {
+        return "+";
+    }
 }
