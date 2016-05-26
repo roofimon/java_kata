@@ -49,4 +49,10 @@ public class CaptchaTest {
         assertEquals("+", captcha.getOperator());
     }
 
+    @Test
+    public void operatorShouldBeMinusWhenOperatorIs3() {
+        Captcha captcha = new Captcha(1,1,3,DUMMY_RIGHT);
+        assertEquals("-",captcha.getOperator());
+    }
+
 }
