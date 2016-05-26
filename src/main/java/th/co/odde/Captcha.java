@@ -19,10 +19,7 @@ public class Captcha {
     }
 
     public String getOperator() {
-        if(this.operator ==  3)
-            return "-";
-        if (this.operator == 2)
-            return "*";
-        return "+";
+        String[] intToOperator = {"+", "*", "-"};
+        return intToOperator[this.operator-1];
     }
 }
